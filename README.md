@@ -37,5 +37,6 @@ Dataset | Size | Average Object Size
 Location, size and image composition statistics
 
 ### Trained Weights
-[Google Drive](https://drive.google.com/drive/folders/1ZYfYUv00o63Q2O8Ozsd7JQif42KH38Ra?usp=drive_link). 
+[Google Drive](https://drive.google.com/drive/folders/1ZYfYUv00o63Q2O8Ozsd7JQif42KH38Ra?usp=drive_link)
+
 This Google Drive contains pre-trained weights from various models, including YOLOv8 and Detection Transforms (DETR).
