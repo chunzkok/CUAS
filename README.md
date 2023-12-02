@@ -1,4 +1,4 @@
-# CUAS
+![image](https://github.com/cweekiat/cuas/assets/64469491/bba21cf7-d11e-4395-9e6c-06b583947b5f)# CUAS
 
 This repository aims to compile valuable information, datasets, and trained models related to countering unmanned aerial systems.
 
@@ -28,13 +28,16 @@ models flying at different lightning and background conditions. This dataset can
 
 Dataset object size
 
-Dataset | Size | Average Object Size
---------|------|---------------------
-**MAV-VID** | *Training*: 53 videos (29,500 images) <br /> *Validation*: 11 videos (10,732 images) | 215 x 128 pxs (3.28% of image size)
-**Drone-vs-Bird** | *Training*: 61 videos (85,904 images) <br /> *Validation*: 16 videos (18,856 images) | 34 x 23 pxs (0.10% of image size)
-**Anti-UAV** | *Training*: 60 videos (149,478 images) <br /> *Validation*: 40 videos (37,016 images) | *RGB*: 125 x 59 pxs (0.40% image size)<br />*IR*: 52 x 29 pxs (0.50% image size)
+Dataset | Size | Description | Links
+--------|------|---------------------|-------
+**MAV-VID** | *Training*: 29,500 image <br /> *Validation*: 10,732 images | Contains videos of drones captured from other drones and ground-based cameras | [Link](https://bitbucket.org/alejodosr/mav-vid-dataset/src/master/)
+**Drone-vs-Bird** | *Training*: 85,904 images <br /> *Validation*: 18,856 images | Comprises videos of UAV captured at long distances and surrounded by small objects | [Link](https://github.com/wosdetc/challenge/tree/master)
+**Anti-UAV** | *Training*: 149,478 images <br /> *Validation*: 37,016 images | Contains RGB and IR recordings in different lightning and background conditions
+ | [Link](https://anti-uav.github.io/dataset/)
+**DUT Anti-UAV** | *Training*: 5,200 images <br /> *Validation*: 2,000 images <br /> 20 video clips | Contains videos of drones captured from other drones and ground-based cameras | [Link](https://github.com/wangdongdut/DUT-Anti-UAV)
+**Vis-Drone** | 288 video clips (261,908 frames) <br /> 10,209 static images | Drone-captured images of objects, such as pedestrians, cars, bicycles, and tricycles | [Link](https://github.com/VisDrone/VisDrone-Dataset)
+**CUAS** | Total 8,555 images | Contains videos of drones captured from other drones and ground-based cameras | [Link](https://universe.roboflow.com/wk-meyzk/cuas-pq71v)
 
-Location, size and image composition statistics
 
 ### 2. Trained Weights
 [Google Drive](https://drive.google.com/drive/folders/1ZYfYUv00o63Q2O8Ozsd7JQif42KH38Ra?usp=drive_link)
