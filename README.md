@@ -1,4 +1,4 @@
-![image](https://github.com/cweekiat/cuas/assets/64469491/bba21cf7-d11e-4395-9e6c-06b583947b5f)# CUAS
+# CUAS
 
 This repository aims to compile valuable information, datasets, and trained models related to countering unmanned aerial systems.
 
