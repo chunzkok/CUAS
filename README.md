@@ -24,11 +24,11 @@ Dataset | Size | Description | Links
 Explore the following pre-trained detection models designed specifically for countering unmanned aerial systems. These models from the Google Drive are ready to be used or fine-tuned for CUAS detection tasks. They trained using various models, including YOLOv8 and Detection Transforms (DETR).
 
 ## 3. Challenges of Drone Detection and Tracking
-*Out-of-View: Re-ID difficult when the target moves out of the frame.
-*Occlusion: Target is partially or heavily occluded.
-*Dynamic Background Clusters: Dynamic changes (e.g., buildings, leaves, birds) in the background around the target.
-*Low Resolution: Especially when the area of the bounding box is small.
-*Target Scale: Target usually occupies a small pixel area.
-*Fast & Random Motion: Difficult to predict motion in next timestep.
-*Moving Camera: Affects filters used for tracking.
-*Limited Computational Resources: Limited by GPU and computing power on drone
+* Out-of-View: Re-ID difficult when the target moves out of the frame.
+* Occlusion: Target is partially or heavily occluded.
+* Dynamic Background Clusters: Dynamic changes (e.g., buildings, leaves, birds) in the background around the target.
+* Low Resolution: Especially when the area of the bounding box is small.
+* Target Scale: Target usually occupies a small pixel area.
+* Fast & Random Motion: Difficult to predict motion in next timestep.
+* Moving Camera: Affects filters used for tracking.
+* Limited Computational Resources: Limited by GPU and computing power on drone
