@@ -2,27 +2,9 @@
 
 This repository aims to compile valuable information, datasets, and trained models related to countering unmanned aerial systems.
 
-### 1. Datasets
+## 1. Datasets
 
-#### Multirotor Aerial Vehicle VID (MAV-VID)
-
-This dataset consists on videos at different setups of single UAV. 
-It contains videos captured from other drones, ground based surveillance cameras and handheld mobile devices.
-It can be downloaded in its [kaggle site](https://www.kaggle.com/alejodosr/multirotor-aerial-vehicle-vid-mavvid-dataset). 
-
-#### Drone-vs-Bird
-As part of the [International Workshop on Small-Drone Surveillance, Detection and Counteraction techniques](https://wosdetc2020.wordpress.com/drone-vs-bird-detection-challenge/)
-of IEEE AVSS 2020, the main goal of this challenge is to reduce the high false positive rates that vision-based methods 
-usually suffer. This dataset comprises videos of UAV captured at long distances and often surrounded by small objects, such as birds.
-
-The videos can be downloaded upon request and the annotations can be downloaded via their [GitHub site](https://github.com/wosdetc/challenge).
-The annotations follow a custom format, where a a .txt file is given for each video. Each annotation file has a line
-for each video frame and the annotation is given in the format `<Frame number> <Number of Objects> <x> <y> <width> <height> [<x> <y> ...]`.
-
-#### Anti-UAV
-This multi-modal dataset comprises fully-annotated RGB and IR unaligned videos. Anti-UAV dataset is intended to provide 
-a real-case benchmark for evaluating object tracker algorithms in the context of UAV. It contains recordings of 6 UAV 
-models flying at different lightning and background conditions. This dataset can be downloaded in their [website](https://anti-uav.github.io/dataset/).
+This section provides a brief overview of datasets available for training and evaluating models in the field of Counter Unmanned Aerial Systems (CUAS) detection. These datasets aim to support research and development efforts in identifying and countering unmanned aerial threats.
 
 #### Dataset Statistics
 
@@ -36,7 +18,17 @@ Dataset | Size | Description | Links
 **CUAS** | Total 8,555 images | Contains videos of drones captured from other drones and ground-based cameras | [Link](https://universe.roboflow.com/wk-meyzk/cuas-pq71v)
 
 
-### 2. Trained Weights
+## 2. Trained Weights
 [Google Drive](https://drive.google.com/drive/folders/1ZYfYUv00o63Q2O8Ozsd7JQif42KH38Ra?usp=drive_link)
 
-This Google Drive contains pre-trained weights from various models, including YOLOv8 and Detection Transforms (DETR).
+Explore the following pre-trained detection models designed specifically for countering unmanned aerial systems. These models from the Google Drive are ready to be used or fine-tuned for CUAS detection tasks. They trained using various models, including YOLOv8 and Detection Transforms (DETR).
+
+## 3. Challenges of Drone Detection and Tracking
+*Out-of-View: Re-ID difficult when the target moves out of the frame.
+*Occlusion: Target is partially or heavily occluded.
+*Dynamic Background Clusters: Dynamic changes (e.g., buildings, leaves, birds) in the background around the target.
+*Low Resolution: Especially when the area of the bounding box is small.
+*Target Scale: Target usually occupies a small pixel area.
+*Fast & Random Motion: Difficult to predict motion in next timestep.
+*Moving Camera: Affects filters used for tracking.
+*Limited Computational Resources: Limited by GPU and computing power on drone
