@@ -1,5 +1,4 @@
 # cuas
-Deep-Learning Neural Network for Counter UAV Application
 
 This repository aims to compile valuable information, datasets, and trained models related to countering unmanned aerial systems.
 
