@@ -1,8 +1,8 @@
-# cuas
+# CUAS
 
 This repository aims to compile valuable information, datasets, and trained models related to countering unmanned aerial systems.
 
-### Datasets
+### 1. Datasets
 
 #### Multirotor Aerial Vehicle VID (MAV-VID)
 
@@ -36,7 +36,7 @@ Dataset | Size | Average Object Size
 
 Location, size and image composition statistics
 
-### Trained Weights
+### 2. Trained Weights
 [Google Drive](https://drive.google.com/drive/folders/1ZYfYUv00o63Q2O8Ozsd7JQif42KH38Ra?usp=drive_link)
 
 This Google Drive contains pre-trained weights from various models, including YOLOv8 and Detection Transforms (DETR).
