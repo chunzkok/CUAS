@@ -2,6 +2,8 @@
 
 This repository aims to compile valuable information, datasets, and trained models related to countering unmanned aerial systems.
 
+![Detection Demo](results/video/2.gif)
+
 ## 1. Datasets
 
 This section provides a brief overview of datasets available for training and evaluating models in the field of Counter Unmanned Aerial Systems (CUAS) detection. These datasets aim to support research and development efforts in identifying and countering unmanned aerial threats.
