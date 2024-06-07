@@ -39,15 +39,16 @@ Explore the following pre-trained detection models designed specifically for cou
 
 <img src="models/method.png" alt="Method" width="100%">
 
+#### Overview 
 Our drone detection methodology is a hybrid approach that integrates a Convolutional Neural Network (CNN) and conventional computer vision techniques to achieve robust and accurate detections. This method leverages the strengths of both deep learning and traditional image processing methods to enhance detection performance.
 
-### Convolutional Neural Network: YOLOv8
+#### Convolutional Neural Network: YOLOv8
 The CNN component utilizes YOLOv8, a state-of-the-art object detection algorithm. We trained YOLOv8 on a custom dataset of over 8,000 images, augmented for variability, to accurately identify drones across various scenarios. The training process involved data collection and annotation, data augmentation, and model training and fine-tuning to optimize performance and generalize effectively.
 
-### Traditional Computer Vision Techniques
+#### Traditional Computer Vision Techniques
 The conventional computer vision component consists of three parts: background motion estimation, spatio-temporal characteristic extraction, and Kalman filter tracking. First, we estimate background motion using a perspective transformation model and perform background subtraction to highlight moving objects. Next, we calculate optical flow to track the movement of detected objects and analyze their spatio-temporal characteristics, identifying potential targets based on motion patterns. Finally, we apply a Kalman filter to track the detected objects, reducing noise and smoothing object trajectories.
 
-### Merging and Combining Detections
+#### Merging and Combining Detections
 In the final step, we merge the detections from YOLOv8 and the conventional methods. Bounding boxes and tracking IDs are combined, ensuring consistent object identification across frames. A detection is considered positive, and marked with a green bounding box, if both methods detect the same object, reducing false positives and enhancing accuracy. This hybrid approach leverages the strengths of both deep learning and traditional image processing to ensure reliable drone detection in diverse and challenging environments.
 
 ## 5. Installation
