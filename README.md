@@ -23,7 +23,7 @@ Dataset | Size | Description | Links
 ## 2. Trained Weights
 [Google Drive](https://drive.google.com/drive/folders/1ZYfYUv00o63Q2O8Ozsd7JQif42KH38Ra?usp=drive_link)
 
-Explore the following pre-trained detection models designed specifically for countering unmanned aerial systems. These models from the Google Drive are ready to be used or fine-tuned for CUAS detection tasks. They trained using various models, including YOLOv8 and Detection Transforms (DETR).
+Explore the following pre-trained detection models designed specifically for countering unmanned aerial systems. These models from the Google Drive are ready to be used or fine-tuned for CUAS detection tasks. They trained using various models, including YOLOv8 and Detection Transformers (DETR).
 
 ## 3. Challenges of Drone Detection and Tracking
 * Out-of-View: Re-ID difficult when the target moves out of the frame.
