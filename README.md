@@ -32,3 +32,49 @@ Explore the following pre-trained detection models designed specifically for cou
 * Fast & Random Motion: Difficult to predict motion in next timestep.
 * Moving Camera: Affects filters used for tracking.
 * Limited Computational Resources: Limited by GPU and computing power on drone
+
+
+## 4. Installation
+
+### Prerequisites
+- [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html) must be installed on your system.
+
+### 1. Clone the Repository
+First, clone the repository to your local machine:
+
+```bash
+git clone https://github.com/cweekiat/CUAS.git
+cd CUAS
+```
+
+### 2. Create the Conda Environment
+
+Create a new conda environment using the provided environment.yml file:
+
+```bash
+conda env create -f environment.yml
+conda activate CUAS 
+```
+
+### 3. Running the Code
+
+```bash
+python3 detect.py 1.mp4
+```
+
+#### Usage
+Add your videos into ```./data/videos/``` folder and run 
+```bash
+python3 detect.py [your_video]
+```
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+This project references the detection and tracking model in this paper: 
+
+J. Li, D. Ye, M. Kolsch, J. Wachs and C. Bouman, "Fast and Robust UAV to UAV Detection and Tracking from Video" in IEEE Transactions on Emerging Topics in Computing. doi: 10.1109/TETC.2021.3104555 url: https://doi.ieeecomputersociety.org/10.1109/TETC.2021.3104555
+
