@@ -39,16 +39,16 @@ Explore the following pre-trained detection models designed specifically for cou
 
 <img src="models/method.png" alt="Method" width="100%">
 
-#### Overview 
+### Overview 
 Our drone detection methodology is a hybrid approach that integrates a Convolutional Neural Network (CNN) and conventional computer vision techniques to achieve robust and accurate detections. This method leverages the strengths of both deep learning and traditional image processing methods to enhance detection performance.
 
-#### Convolutional Neural Network: YOLOv8
+### Convolutional Neural Network: YOLOv8
 The CNN component utilizes YOLOv8, a state-of-the-art object detection algorithm. We trained YOLOv8 on a custom dataset of over 8,000 images, augmented for variability, to accurately identify drones across various scenarios. The training process involved data collection and annotation, data augmentation, and model training and fine-tuning to optimize performance and generalize effectively.
 
-#### Traditional Computer Vision Techniques
+### Traditional Computer Vision Techniques
 The conventional computer vision component consists of three parts: background motion estimation, spatio-temporal characteristic extraction, and Kalman filter tracking. First, we estimate background motion using a perspective transformation model and perform background subtraction to highlight moving objects. Next, we calculate optical flow to track the movement of detected objects and analyze their spatio-temporal characteristics, identifying potential targets based on motion patterns. Finally, we apply a Kalman filter to track the detected objects, reducing noise and smoothing object trajectories.
 
-#### Merging and Combining Detections
+### Merging and Combining Detections
 In the final step, we merge the detections from YOLOv8 and the conventional methods. Bounding boxes and tracking IDs are combined, ensuring consistent object identification across frames. A detection is considered positive, and marked with a green bounding box, if both methods detect the same object, reducing false positives and enhancing accuracy. This hybrid approach leverages the strengths of both deep learning and traditional image processing to ensure reliable drone detection in diverse and challenging environments.
 
 ## 5. Installation
@@ -91,7 +91,25 @@ This project is licensed under the Creative Commons Attribution-NonCommercial 4.
 
 ## Acknowledgments
 
-This project references the detection and tracking model in this paper: 
+This project builds the detection and tracking model in this paper: 
 
 J. Li, D. Ye, M. Kolsch, J. Wachs and C. Bouman, "Fast and Robust UAV to UAV Detection and Tracking from Video" in IEEE Transactions on Emerging Topics in Computing. doi: 10.1109/TETC.2021.3104555 url: https://doi.ieeecomputersociety.org/10.1109/TETC.2021.3104555
-
+``` bash
+@software{yolov8_ultralytics,
+  author = {Glenn Jocher and Ayush Chaurasia and Jing Qiu},
+  title = {Ultralytics YOLOv8},
+  version = {8.0.0},
+  year = {2023},
+  url = {https://github.com/ultralytics/ultralytics},
+  orcid = {0000-0001-5950-6979, 0000-0002-7603-6750, 0000-0003-3783-7069},
+  license = {AGPL-3.0}
+}
+@inproceedings{li2016multi,
+  title={Multi-target detection and tracking from a single camera in Unmanned Aerial Vehicles (UAVs)},
+  author={Li, Jing and Ye, Dong Hye and Chung, Timothy and Kolsch, Mathias and Wachs, Juan and Bouman, Charles},
+  booktitle={2016 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages={4992--4997},
+  year={2016},
+  organization={IEEE}
+}
+```
