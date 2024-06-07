@@ -2,7 +2,7 @@
 
 This repository aims to compile valuable information, datasets, and trained models related to countering unmanned aerial systems.
 
-![Detection Demo](results/videos/2.gif)
+![Detection Demo](results/video/2.gif)
 
 ## 1. Datasets
 
