@@ -85,6 +85,11 @@ Add your videos into ```./data/videos/``` folder and run
 python3 detect.py [your_video]
 ```
 
+To run on live webcam, run
+```bash
+python3 detect.py 0
+```
+
 ## License
 
 This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. See the LICENSE file for details.
