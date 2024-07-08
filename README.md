@@ -70,7 +70,7 @@ Create a new conda environment using the provided environment.yml file:
 
 ```bash
 conda env create -f environment.yml
-conda activate CUAS 
+conda activate cuas 
 ```
 
 ### 3. Running the Code
