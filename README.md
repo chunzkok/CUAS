@@ -60,7 +60,7 @@ In the final step, we merge the detections from YOLOv8 and the traditional metho
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/cweekiat/CUAS.git
+git clone --recursve-submodules https://github.com/chunzkok/CUAS
 cd CUAS
 ```
 
@@ -73,21 +73,31 @@ conda env create -f environment.yml
 conda activate cuas 
 ```
 
-### 3. Running the Code
+### 3. Build pyCFTrackers libraries
 
 ```bash
-python3 detect.py 1.mp4
+cd pyCFTrackers
+pip install -r requirements.txt
+
+cd lib/eco/features/
+python setup.py build_ext --inplace
+cd ../../..
+
+cd lib/pysot/utils/
+python setup.py build_ext --inplace
+cd ../../../..
 ```
+
 
 #### Usage
 Add your videos into ```./data/videos/``` folder and run 
 ```bash
-python3 detect.py [your_video]
+python3 run_tracker.py [your_video]
 ```
 
 To run on live webcam, run
 ```bash
-python3 detect.py 0
+python3 run_tracker.py 0
 ```
 
 ## License
