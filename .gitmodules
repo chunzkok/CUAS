@@ -1,0 +1,3 @@
+[submodule "pyCFTrackers"]
+	path = pyCFTrackers
+	url = git@github.com:chunzkok/pyCFTrackers
