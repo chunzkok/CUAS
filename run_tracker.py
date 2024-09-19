@@ -1,17 +1,20 @@
 import cv2
 import numpy as np
-import datetime, argparse, os, re
+import datetime, argparse, os, re, sys
+from pathlib import Path 
+
+sys.path.insert(0, str(Path("./pyCFTrackers/").absolute()))
 from pyCFTrackers.lib.utils import APCE,PSR
 from pyCFTrackers.lib.bbox_helper import cxy_wh_2_rect
 from pyCFTrackers.cftracker.csrdcf import CSRDCF
 from pyCFTrackers.cftracker.config import csrdcf_config
-
 
 from util.params import *
 from util.helper import *
 from util.Generate_pm_pa import *
 from util.Extract_Patch import *
 from util.Detect_Patch import *
+
 
 ## ======== Taken from detect.py ============
 # Argument parser setup
