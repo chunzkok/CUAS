@@ -60,7 +60,7 @@ In the final step, we merge the detections from YOLOv8 and the traditional metho
 First, clone the repository to your local machine:
 
 ```bash
-git clone --recursve-submodules https://github.com/chunzkok/CUAS
+git clone --recurse-submodules https://github.com/chunzkok/CUAS
 cd CUAS
 ```
 
