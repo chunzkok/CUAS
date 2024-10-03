@@ -8,7 +8,7 @@ from pyCFTrackers.cftracker.config import strdcf_hc_config
 from helper import is_close
 
 TRACKER_PERSISTENCE = 90 # number of frames to persist tracker after YOLO bound box is missing
-TRACKER_ACCEPTANCE = 5 # number of YOLO detections required to initialize tracker for a target
+TRACKER_ACCEPTANCE = 5 # number of consecutive YOLO detections required to initialize tracker for a target
 
 @dataclass
 class YoloBox:
@@ -79,6 +79,15 @@ class Target:
         for yolo_id in yolo_data.keys() - cls.yolo_mapping.keys():
             # new yolo targets, create them
             Target(yolo_box=YoloBox(yolo_id, yolo_data[yolo_id], cls.curr_frameidx, 0))
+
+        for yolo_id in cls.yolo_mapping.keys() - yolo_data.keys():
+            # existing yolo targets that were not detected this round
+            target = cls.yolo_mapping[yolo_id]
+            assert target._yolo_box is not None
+
+            if target._tracker is None and target._yolo_box.detect_count < TRACKER_ACCEPTANCE:
+                del cls.yolo_mapping[yolo_id]
+                cls.all_targets.remove(target)
 
 
     @classmethod
