@@ -100,6 +100,8 @@ To run on live webcam, run
 python3 run_tracker.py 0
 ```
 
+The scripts `detect_with_tracker.py` and `detect.py` can also be run in the same way.
+
 ## License
 
 This project is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. See the LICENSE file for details.
