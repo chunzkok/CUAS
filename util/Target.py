@@ -10,17 +10,20 @@ from helper import is_close
 TRACKER_PERSISTENCE = 90 # number of frames to persist tracker after YOLO bound box is missing
 TRACKER_ACCEPTANCE = 5 # number of consecutive YOLO detections required to initialize tracker for a target
 
+
+XYWH = Tuple[int, int, int, int]
+
 @dataclass
 class YoloBox:
     id: int
-    xywh: Tuple[int, int, int, int]
+    xywh: XYWH
     frameidx: int
     detect_count: int
 
 @dataclass
 class Tracker:
     instance: BaseCF
-    xywh: Tuple[int, int, int, int]
+    xywh: XYWH
 
     def update(self, frame):
         self.xywh = self.instance.update(frame)
@@ -28,7 +31,7 @@ class Tracker:
 @dataclass
 class DepthBox:
     depth: int
-    xywh: Tuple[int, int, int, int]
+    xywh: XYWH
 
 class Target:
     next_id: ClassVar[int] = 0
@@ -70,8 +73,12 @@ class Target:
         cls.curr_frameidx += 1
         cls.curr_frame = frame
 
+        for target in cls.all_targets:
+            if target._tracker is not None:
+                target._tracker.update(cls.curr_frame)
+
     @classmethod
-    def batch_update_yolo(cls, yolo_data: Dict[int, Tuple[int, int, int, int]]):
+    def batch_update_yolo(cls, yolo_data: Dict[int, XYWH]):
         for yolo_id in yolo_data.keys() & cls.yolo_mapping.keys():
             # update existing yolo targets
             cls.yolo_mapping[yolo_id].update_yolo(yolo_data[yolo_id])
@@ -108,7 +115,7 @@ class Target:
         new_target = Target(frame, depth_box = depth_box)
         return new_target
 
-    def update_yolo(self, xywh: Tuple[int, int, int, int]):
+    def update_yolo(self, xywh: XYWH):
         assert self._yolo_box is not None
         yolo = self._yolo_box
         yolo.xywh = xywh
@@ -133,7 +140,7 @@ class Target:
             return self._depth_box.xywh
         return None
 
-    def aggregate_coords(self) -> Tuple[List[str], Optional[Tuple[int]]]:
+    def aggregate_coords(self) -> Tuple[List[str], Optional[XYWH]]:
         yolo_coords = self.get_yolo_xywh()
         tracker_coords = self.get_tracker_xywh()
         depth_detect_coords = self.get_depth_detect_xywh()
