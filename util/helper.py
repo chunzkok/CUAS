@@ -137,10 +137,10 @@ def boundary(x,y,radius, w,h):
         x = 2*radius
     return int(x), int(y)
         
-def draw_str(dst, x, y, s):
+def draw_str(dst, x, y, s, fontScale=1.0):
     # show text in the image
-    cv2.putText(dst, s, (x+1, y+1), cv2.FONT_HERSHEY_PLAIN, 1.0, (0, 0, 0), thickness = 2, lineType=cv2.LINE_AA)
-    cv2.putText(dst, s, (x, y), cv2.FONT_HERSHEY_PLAIN, 1.0, (255, 255, 255), lineType=cv2.LINE_AA)
+    cv2.putText(dst, s, (x+1, y+1), cv2.FONT_HERSHEY_PLAIN, fontScale, (0, 0, 0), thickness = 2, lineType=cv2.LINE_AA)
+    cv2.putText(dst, s, (x, y), cv2.FONT_HERSHEY_PLAIN, fontScale, (255, 255, 255), lineType=cv2.LINE_AA)
 
 def draw_str_large(dst, x, y, s):
     # show text in the image
