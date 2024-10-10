@@ -71,6 +71,7 @@ dependencies:
       - colorama==0.4.6
       - cycler==0.11.0
       - cython==3.0.11
+      - dill==0.3.7
       - fastrlock==0.8.2
       - flatbuffers==23.5.26
       - fonttools==4.38.0
@@ -144,4 +145,3 @@ dependencies:
       - werkzeug==2.2.3
       - wrapt==1.15.0
       - zipp==3.15.0
-prefix: /home/kokcz/miniconda3/envs/cuas
